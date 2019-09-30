@@ -223,21 +223,24 @@ WeChat.prototype.handleMsg = function(req, res) {
             Description: "使用Node.js实现自定义微信菜单",
             PicUrl:
               "http://img.blog.csdn.net/20170605162832842?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaHZrQ29kZXI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast",
-            Url: "http://blog.csdn.net/hvkcoder/article/details/72868520"
+            // Url: "http://blog.csdn.net/hvkcoder/article/details/72868520"
+            Url: "http:www.shiyishengbaby.cn:8080"
           },
           {
             Title: "Node.js access_token的获取、存储及更新",
             Description: "Node.js access_token的获取、存储及更新",
             PicUrl:
               "http://img.blog.csdn.net/20170528151333883?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaHZrQ29kZXI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast",
-            Url: "http://blog.csdn.net/hvkcoder/article/details/72783631"
+            // Url: "http://blog.csdn.net/hvkcoder/article/details/72783631"
+            Url: "http:www.shiyishengbaby.cn:8080"
           },
           {
             Title: "Node.js 接入微信公众平台开发",
             Description: "Node.js 接入微信公众平台开发",
             PicUrl:
               "http://img.blog.csdn.net/20170605162832842?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvaHZrQ29kZXI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast",
-            Url: "http://blog.csdn.net/hvkcoder/article/details/72765279"
+            // Url: "http://blog.csdn.net/hvkcoder/article/details/72765279"
+            Url: "http:www.shiyishengbaby.cn:8080"
           }
         ];
         //判断消息类型
@@ -246,11 +249,10 @@ WeChat.prototype.handleMsg = function(req, res) {
           switch (result.Event.toLowerCase()) {
             case "subscribe":
               //回复消息
-              var content =
-                "欢迎关注 hvkcoder 公众号，一起斗图吧。回复以下数字：\n";
-              content += "1.你是谁\n";
-              content += "2.关于Node.js\n";
-              content += "回复 “文章”  可以得到图文推送哦~\n";
+              var content = "欢迎关注 妈咪也好当，一起省钱吧。回复以下数字：\n";
+              content += "1.卖家微信号\n";
+              content += "2.产品详情\n";
+              content += "回复 “活动”  可以得到活动产品推送哦~\n";
               reportMsg = msg.txtMsg(fromUser, toUser, content);
               break;
             case "click":
